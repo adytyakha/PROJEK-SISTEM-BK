@@ -201,9 +201,11 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-          </a>
+           <li class="active"><a href="index.php"><i class="fa fa-home"></i> <span>Dashboard</span>
+            
+            
+          </a>  
+        </li>
         </li>
 
 
@@ -216,35 +218,36 @@
           </a>
           <ul class="treeview-menu">
 
-             <li><a href="pages/tables/data.html"><i class="fa fa-user-plus"></i> Pendaftaran</a></li>           
-            <li><a href="pages/tables/simple.html"><i class="fa fa-edit"></i> Edit Data Siswa</a></li>
-        <li><a href="pages/tables/data.html"><i class="fa fa-user"></i> Tabel Data Siswa</a></li>
+             <li><a href="page/pendaftaran.php"><i class="fa fa-user-plus"></i> Pendaftaran</a></li>           
+        <li><a href="page/tabeldatasiswa.php"><i class="fa fa-user"></i> Tabel Data Siswa</a></li>
           </ul>
         </li>
 
 
 
-
-
-       <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-envelope-o"></i> <span>Pesan</span>
-          </a>
-        </li>
-
-         <li>
-          <a href="pages/widgets.html">
-            <i class="glyphicon glyphicon-blackboard"></i> <span>Materi</span>
-          </a>
-        </li>
-
-
-
-          <li class="treeview">
+<li class="treeview">
           <a href="#">
-            <i class="fa fa-bell"></i> <span>Konsultasi</span>
+            <i class="fa fa-envelope"></i> <span>Chatting</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
+          <ul class="treeview-menu">
+
+             <li><a href="page/chat.php"><i class="fa fa-whatsapp"></i> Chat</a></li>           
+            <li><a href="page/chatgrub.php"><i class="fa  fa-comments"></i> Chat Grub</a></li>
+          </ul>
         </li>
+
+
+  
+
+   <li ><a href="page/materi.php"><i class="glyphicon glyphicon-blackboard"></i> Materi</a></li>         
+
+         
+
+<li ><a href="page/konseling.php"><i class="fa fa-bell"></i> Konseling</a></li>         
+          
 
 
 

@@ -106,22 +106,56 @@
       </div>
 
   <div class="form-group">
+               
+
+               <!-- Date dd/mm/yyyy -->
+              <div class="form-group">
                 <label>Tanggal Lahir:</label>
 
-                <div class="input-group date">
+                <div class="input-group">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-lift" id="datepicker">
+                  <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
                 </div>
+                <h10>example : Tanggal-Bulan-Tahun</h10>
                 <!-- /.input group -->
               </div>
+                <!-- /.input group -->
+              </div>
+
+
+
+
+     <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Agama</label>
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">Islam</option>
+                  <option>Kristen</option>
+                  <option>Budha</option>
+                  <option>Hindu</option>
+                  <option>Atheis</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+
+
 
       <div class="form-group has-feedback">
         <label>Email</label>
         <input type="text" class="form-control" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
+
+<br>
+ <h5> Username dan Password digunakan untuk Masuk </h5>
+<br>
+
+     
 
 <div class="form-group has-feedback">
   <label>Username</label>
@@ -221,38 +255,12 @@
 <script>
   $(function () {
     //Initialize Select2 Elements
-    $('.select2').select2()
+   
 
     //Datemask dd/mm/yyyy
     $('#datemask').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
     //Datemask2 mm/dd/yyyy
-    $('#datemask2').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
-    //Money Euro
-    $('[data-mask]').inputmask()
-
-    //Date range picker
-    $('#reservation').daterangepicker()
-    //Date range picker with time picker
-    $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/MM/mmm h:mm A' })
-    //Date range as a button
-    $('#daterange-btn').daterangepicker(
-      {
-        ranges   : {
-          'Today'       : [moment(), moment()],
-          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
-          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
-          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        },
-        startDate: moment().subtract(29, 'days'),
-        endDate  : moment()
-      },
-      function (start, end) {
-        $('#daterange-btn span').html(start.format('M D, YYYY') + ' - ' + end.format('MMM D, YYYY'))
-      }
-    )
-
+   
     //Date picker
     $('#datepicker').datepicker({
       autoclose: true
